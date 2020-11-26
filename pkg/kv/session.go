@@ -230,7 +230,7 @@ func (se *session) takeKvPairs() ([]Pair, int) {
 }
 
 // Txn implements the sessionctx.Context interface.
-func (se *session) Txn(active bool) (kv.Transaction, error) {
+func (se *session) Txn(active bool, ops ...sessionctx.TxnOptionFunc) (kv.Transaction, error) {
 	return &se.txn, nil
 }
 
