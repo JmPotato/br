@@ -84,7 +84,6 @@ type kvMemBuf struct {
 	buf           *bytesBuf
 	availableBufs []*bytesBuf
 	kvPairs       *KvPairs
-	capacity      int
 	size          int
 }
 
